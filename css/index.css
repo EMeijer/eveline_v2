@@ -22,6 +22,7 @@ hr {
 
 body {
   line-height: 1.6;
+  background-color: #FEFBF7;
 }
 
 ol,
@@ -69,8 +70,8 @@ hr {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+ 
 }
-
 
 
 .column {
@@ -86,7 +87,7 @@ hr {
 
 /* Full-width streamer block */
 .streamer {
-  background-color: #f2f2f2;
+  background-color: #FCF3E7;
   text-align: center;
   padding: 20px 0;
 }
@@ -113,7 +114,7 @@ hr {
   display: flex;
   flex-wrap: nowrap;
   gap: 16px;
-  animation: marque 10s linear infinite;
+  animation: marque 30s linear infinite;
 }
 
 .image-list-item {
@@ -124,6 +125,16 @@ hr {
   width: 100%;
   min-width: 360px;
   height: auto;
+  margin: 10px;
+  filter: grayscale(100%);
+  transition: all 0.2s ease-out;
+}
+
+.streamer img:hover {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+  filter: grayscale(0%);
 }
 
 /* Contact block */
@@ -132,6 +143,11 @@ hr {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+.contact img {
+  max-width: 100px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
