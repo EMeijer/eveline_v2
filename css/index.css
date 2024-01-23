@@ -1,0 +1,100 @@
+/* CSS Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul,
+pre,
+fieldset,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* Set box-sizing to border-box for all elements */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Font Families */
+/* Roboto for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Quicksand for other text elements */
+body,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul,
+pre,
+fieldset,
+hr {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/* 2-column layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  min-width: 0;
+  /* Fix overflow issue in some browsers */
+}
+
+/* Full-width streamer block */
+.streamer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.streamer img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+/* Contact block */
+.contact {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
