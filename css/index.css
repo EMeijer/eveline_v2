@@ -71,11 +71,17 @@ hr {
   margin: 0 auto;
 }
 
+
+
 .column {
   flex: 1;
   padding: 20px;
   min-width: 0;
   /* Fix overflow issue in some browsers */
+}
+
+.column img {
+  width: 100%;
 }
 
 /* Full-width streamer block */
@@ -85,10 +91,39 @@ hr {
   padding: 20px 0;
 }
 
+.streamer-inner {
+  overflow: auto;
+  display: flex;
+
+  /* Invisible scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Invisible scrollbar */
+.streamer-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.image-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  animation: marque 10s linear infinite;
+}
+
+.image-list-item {
+  padding: 16px;
+}
+
 .streamer img {
-  max-width: 100%;
+  width: 100%;
+  min-width: 360px;
   height: auto;
-  margin: 10px;
 }
 
 /* Contact block */
@@ -97,4 +132,30 @@ hr {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container, .image-list {
+    flex-direction: column;
+  }
+
+  .image-list {
+    flex-wrap: wrap;
+    animation: none;
+  }
+
+  [aria-hidden="true"] {
+    display: none;
+  }
+}
+
+
+@keyframes marque {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 16px));
+  }
 }
