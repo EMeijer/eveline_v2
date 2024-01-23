@@ -70,9 +70,7 @@ hr {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
- 
 }
-
 
 .column {
   flex: 1;
@@ -95,6 +93,7 @@ hr {
 .streamer-inner {
   overflow: auto;
   display: flex;
+  gap: 16px;
 
   /* Invisible scrollbar */
   -ms-overflow-style: none;
@@ -114,7 +113,7 @@ hr {
   display: flex;
   flex-wrap: nowrap;
   gap: 16px;
-  animation: marque 30s linear infinite;
+  animation: marque 50s linear infinite;
 }
 
 .image-list-item {
@@ -122,18 +121,13 @@ hr {
 }
 
 .streamer img {
-  width: 100%;
-  min-width: 360px;
-  height: auto;
-  margin: 10px;
+  width: 250px;
+  height: 250px;
   filter: grayscale(100%);
   transition: all 0.2s ease-out;
 }
 
 .streamer img:hover {
-  max-width: 100%;
-  height: auto;
-  margin: 10px;
   filter: grayscale(0%);
 }
 
@@ -150,21 +144,37 @@ hr {
   width: 100%;
 }
 
+.contact a {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 600px) {
   .container, .image-list {
     flex-direction: column;
   }
 
-  .image-list {
-    flex-wrap: wrap;
-    animation: none;
+  .streamer-inner {
+    overflow: visible;
+    width: 100%;
   }
+
+  .image-list {
+    /* flex-wrap: wrap; */
+    animation: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .streamer img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
 
   [aria-hidden="true"] {
     display: none;
   }
 }
-
 
 @keyframes marque {
   from {
