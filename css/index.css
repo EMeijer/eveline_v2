@@ -63,6 +63,11 @@ hr {
   font-family: 'Fira Sans', sans-serif;
 }
 
+.tiny {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+}
+
 /* 2-column layout */
 .container {
   display: flex;
@@ -87,13 +92,13 @@ hr {
 .streamer {
   background-color: #FCF3E7;
   text-align: center;
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 .streamer-inner {
   overflow: auto;
   display: flex;
-  gap: 16px;
+  gap: 10px;
 
   /* Invisible scrollbar */
   -ms-overflow-style: none;
@@ -121,8 +126,8 @@ hr {
 }
 
 .streamer img {
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   filter: grayscale(100%);
   transition: all 0.2s ease-out;
 }
